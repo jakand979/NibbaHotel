@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12.5vw;
+}
+
+img {
+    width: 15%;
+    margin-bottom: 20px;
+}
+
+input {
+    border-color: #66B394;
+    border-radius: 15px;
+    border-style: solid;
+    width: 100%;
+    outline: none;
+    margin-bottom: 10px;
+    padding: 12.5px;
+}
+
+::placeholder{
+    font-style: italic;
+    opacity: 0.75;
+}

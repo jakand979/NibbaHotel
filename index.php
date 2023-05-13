@@ -5,23 +5,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Roboto&display=swap" >
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/home-styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nibba Hotel - Most Comfortable</title>
 </head>
 <body>
-    <nav class="nav-container">
+    <nav class="home-nav-container">
         <a href="#"><img src="images/logo.png" alt="logo"></a>
-        <a href="#"><h2>About</h2></a>
-        <a href="#"><h2>Contact</h2></a>
-        <a href="#"><h2>About</h2></a>
-        <a href="#"><h2>Contact</h2></a>
-        <a href="#"><h2>Contact</h2></a>
-        <a href="#"><h2>Contact</h2></a>
-        <a href="#"><h2>Contact</h2></a>
-        <button><a href="#"><h2>LOGIN</h2></a></button>
-
+        <a href="#">About</a>
+        <a href="#">Offers</a>
+        <a href="#">Navigation</a>
+        <a href="#">Contact</a>
+        <button><a href="sign-in.php">Sign in</a></button>
     </nav>
 </body>
 </html>
