@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 body {
     margin: 0;
     padding: 0;
-
 }
 
 .home-nav-container {
@@ -9,16 +11,11 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #006633;
+    background-color: #00bfff;
     font-family: 'Open Sans', sans-serif;
     opacity: 0.85;
-    height: 20vh;
+    height: 10vh;
     width: 100vw;
-}
-
-.home-nav-container img {
-    margin-top: 30px;
-    margin-left: 30px;
 }
 
 a {
@@ -27,24 +24,31 @@ a {
 }
 
 a:hover {
-    color: #a57c00;
+    color: #ffe140;
 }
 
 .home-nav-container button {
-    background-color: #485361;
-    border-radius: 15px;
+    background-color: #2e8b57;
     border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-weight: bold;
     text-align: center;
-    height: 7.5vh;
+    height: 7vh;
     width: 7.5vw;
 }
 
 .home-nav-container button a {
     color: #eff0eb;
+    cursor: pointer;
 }
 
+.home-nav-container button a:hover {
+    color: #ffe140;
+}
 
+.main-content {
 
+}
 
 
