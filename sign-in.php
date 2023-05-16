@@ -9,8 +9,7 @@
 </head>
 <body>
   <div class="sign-in-container">
-    <img src="images/logo.png" alt="logo">
-    <form id="login-form">
+      <form id="login-form">
       <input type="text" id="login" name="login" placeholder="login" required>
       <input type="password" id="password" name="password" placeholder="password" required>
     </form>
