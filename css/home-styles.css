@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -31,9 +32,9 @@ body {
 
 .nav-links {
     position: relative;
-    text-decoration: none;
-    font-size: 1.25vw;
     color: #231f32;
+    font-size: 1.25vw;
+    text-decoration: none;
 }
 
 .nav-links::after {
@@ -73,10 +74,13 @@ body {
     transform: translateY(5px);
 }
 
+.slider {
+    width: 100vw;
+}
 
 .slider img {
     height: auto;
-    width: 100%;
+    width: 100vw;
 }
 
 .slider-navigation {
@@ -110,15 +114,38 @@ body {
 
 .about-us {
     position: relative;
-    bottom: 6vh;
-    height: 50vh;
+    bottom: 2vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-image: url("../images/hotel-service.jpg");
     background-position: center center;
 }
 
 .about-us h1 {
+    color: #ffff00;
+    margin-bottom: 11vh;
+    font-family: 'Open Sans', sans-serif;
+}
 
+.about-us span {
+    background-color: #f4dfb6;
+    color: #0978bf;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 0.5vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    position: relative;
+    bottom: 11px;
+    display: flex;
+    height: 30vh;
+    width: 100vw;
+    background-color: #2c272b;
+    margin-bottom: 5vh;
 }
