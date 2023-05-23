@@ -1,31 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
 body {
     margin: 0;
     padding: 0;
 }
 
-.container {
+.sign-in-container {
+    height: 100vh;
     display: flex;
-    height: 10vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4dfb6;
+    opacity: 0.9;
+    font-family: 'Open Sans', sans-serif;
 }
 
-
 form {
-    width: 12.5vw;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 img {
-    width: 15%;
-    margin-bottom: 20px;
+    height: 25vh;
+}
+h2 {
+    margin-bottom: 25px;
+    color: #2c272b;
+}
+
+a:hover {
+    color: #0978bf;
 }
 
 input {
-    border-color: #66B394;
+    border-color: #0978bf;
     border-radius: 15px;
     border-style: solid;
     width: 100%;
     outline: none;
     margin-bottom: 10px;
     padding: 12.5px;
+}
+
+a {
+    color: #2c272b;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #FFFFFF;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+    margin-top: 20px;
+    width: 10vw;
+    height: 10vh;
+}
+
+button:active {
+    transform: translateY(5px);
 }
 
 ::placeholder{

@@ -4,18 +4,19 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .home-nav-container {
+    height: 8vh;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #00bfff;
+    background-color: #f4dfb6;
+    opacity: 0.9;
     font-family: 'Open Sans', sans-serif;
-    opacity: 0.85;
-    height: 8vh;
-    width: 100vw;
 }
 
 .nav-home {
@@ -25,30 +26,30 @@ body {
 }
 
 .nav-home:hover {
-    color: #ffe140;
+    color: #0978bf;
 }
 
 .nav-links {
     position: relative;
     text-decoration: none;
-    font-size: 1vw;
+    font-size: 1.25vw;
     color: #231f32;
 }
 
 .nav-links::after {
+    height: 2px;
+    width: 100%;
+    background-color: #0978bf;
     content: "";
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ffe140;
     visibility: hidden;
     transition: visibility 0.01s ease-in-out;
 }
 
 .nav-links:hover {
-    color: #ffe140;
+    color: #0978bf;
 }
 
 .nav-links:hover:after {
@@ -56,42 +57,26 @@ body {
 }
 
 .click-me {
-    background-color: #006633;
-    border-style: none;
+    height: 5vh;
+    width: 7vw;
+    border-style: solid;
+    border-color: #0978bf;
     border-radius: 5px;
-    color: #eff0eb;
+    outline: none;
+    color: #000000;
     cursor: pointer;
     font-size: 1vw;
     text-align: center;
-    width: 7vw;
-    height: 5vh;
 }
 
 .click-me:active {
     transform: translateY(5px);
 }
 
-.click-me:hover {
-    background-color: #2e8b57;
-    color: #ffe140;
-}
-
-.slider {
-    position: relative;
-    overflow: hidden;
-}
-
-.slide {
-    display: none;
-}
-
-.slide.active {
-    display: block;
-}
 
 .slider img {
-    width: 100%;
     height: auto;
+    width: 100%;
 }
 
 .slider-navigation {
@@ -102,6 +87,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .slider-dots {
@@ -110,14 +96,29 @@ body {
 }
 
 .dot {
-    width: 10px;
     height: 10px;
-    border-radius: 50%;
-    background-color: #999;
+    width: 10px;
     margin: 0 5px;
+    background-color: #999999ff;
+    border-radius: 50%;
     cursor: pointer;
 }
 
 .dot.active {
     background-color: #ffff00;
+}
+
+.about-us {
+    position: relative;
+    bottom: 6vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../images/hotel-service.jpg");
+    background-position: center center;
+}
+
+.about-us h1 {
+
 }

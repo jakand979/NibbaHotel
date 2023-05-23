@@ -10,4 +10,3 @@
 <?php echo "hello my name is rajesh" ?>
 </body>
 </html>
-
