@@ -7,7 +7,7 @@
     <title>Nibba Hotel</title>
 </head>
 <body>
-<?php echo "hello my name is rajesh" ?>
+<?php echo "hello my name is rajesh"; ?>
 </body>
 </html>
 

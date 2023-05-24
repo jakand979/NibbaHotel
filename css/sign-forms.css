@@ -5,7 +5,7 @@ body {
     padding: 0;
 }
 
-.sign-in-container {
+.sign-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -33,43 +33,78 @@ h2 {
     color: #2c272b;
 }
 
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12.5px;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+}
+
+::placeholder{
+    color: #2c272b;
+    font-style: italic;
+    font-weight: bold;
+}
+
+select {
+    width: 108%;
+    margin-bottom: 10px;
+    padding: 12.5px;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+    color: #2c272b;
+    font-style: italic;
+    font-weight: bold;
+}
+
+option {
+    color: #2c272b;
+    font-style: italic;
+    font-weight: bold;
+}
+
+a {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #2c272b;
+    text-decoration: none;
+}
+
 a:hover {
     color: #0978bf;
 }
 
-input {
-    border-color: #0978bf;
-    border-radius: 15px;
-    border-style: solid;
-    width: 100%;
-    outline: none;
-    margin-bottom: 10px;
-    padding: 12.5px;
-}
-
-a {
-    color: #2c272b;
-    text-decoration: none;
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
-
 button {
+    height: 6vh;
+    width: 7vw;
+    margin-top: 20px;
     background-color: #FFFFFF;
     border-color: #0978bf;
     border-radius: 15px;
     border-style: solid;
     outline: none;
-    margin-top: 20px;
-    width: 10vw;
-    height: 10vh;
 }
 
 button:active {
     transform: translateY(5px);
 }
 
-::placeholder{
-    font-style: italic;
-    opacity: 0.75;
+.error {
+    background-color: #e34234;
+    border-color: #e34234;
+    color: #ffff00;
 }
+
+.error-message {
+    margin-top: 5px;
+    color: #e34234;
+    font-size: 15px;
+}
+
+
+

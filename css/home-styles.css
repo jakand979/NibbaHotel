@@ -4,8 +4,8 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
     overflow-x: hidden;
+    background-color: #2c272b; /* TO CHANGE */
 }
 
 .home-nav-container {
@@ -60,8 +60,8 @@ body {
 .click-me {
     height: 5vh;
     width: 7vw;
-    border-style: solid;
     border-color: #0978bf;
+    border-style: solid;
     border-radius: 5px;
     outline: none;
     color: #000000;
@@ -85,13 +85,13 @@ body {
 
 .slider-navigation {
     position: relative;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
 }
 
 .slider-dots {
@@ -116,7 +116,7 @@ body {
     position: relative;
     bottom: 2vh;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,23 +126,24 @@ body {
 }
 
 .about-us h1 {
-    color: #ffff00;
     margin-bottom: 11vh;
+    color: #ffff00;
     font-family: 'Open Sans', sans-serif;
 }
 
 .about-us span {
-    background-color: #f4dfb6;
-    color: #0978bf;
     margin-left: 5vw;
     margin-right: 5vw;
     padding: 0.5vw;
+    background-color: #f4dfb6;
+    color: #0978bf;
     font-family: 'Poppins', sans-serif;
 }
 
+/* TO CHANGE */
 footer {
     position: relative;
-    bottom: 11px;
+    bottom: 20px;
     display: flex;
     height: 30vh;
     width: 100vw;
