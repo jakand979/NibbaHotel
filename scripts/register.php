@@ -20,8 +20,11 @@ if (isset($_POST['login']) && isset($_POST['email']) && isset($_POST['roles']) &
     }
 
     if ($userPassword == $repeatedPassword) {
-        $check_query = "SELECT * FROM users WHERE username = '$userLogin' OR email = '$userEmail' OR password = '$userPassword'";
-        $check_result = $conn->query($check_query);
+        $check_query = "SELECT * FROM users WHERE username = ? OR email = ? OR password = ?";
+        $stmt = $conn->prepare($check_query);
+        $stmt->bind_param("sss", $userLogin, $userEmail, $hashedUserPassword);
+        $stmt->execute();
+        $check_result = $stmt->get_result();
 
         $hashedUserPassword = hash('sha256', $userPassword);
         if ($check_result && $check_result->num_rows > 0) {

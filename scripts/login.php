@@ -16,8 +16,11 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
         die('Failed to connect with database: ' . $conn->connect_error);
     }
 
-    $query = "SELECT * FROM users WHERE username = '$userLogin'";
-    $result = $conn->query($query);
+    $query = "SELECT * FROM users WHERE username = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $userLogin);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
 
     if ($result->num_rows == 1) {
@@ -27,8 +30,11 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
         $storedPassword = $row['password'];
 
         if ($hashedUserPassword == $storedPassword) {
-            $role_query = "SELECT role_id FROM users WHERE username = '$userLogin'";
-            $role_result = $conn->query($query);
+            $role_query = "SELECT role_id FROM users WHERE username = ?";
+            $stmt = $conn->prepare($role_query);
+            $stmt->bind_param("s", $userLogin);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
             $role_row = $result->fetch_assoc();
             $storedRole = $row['role_id'];
