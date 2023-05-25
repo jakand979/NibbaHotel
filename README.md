@@ -6,7 +6,7 @@ Project is using XAMPP (Apache, MariaDB, MySQL, PHP 8.2).
 Project directories:
 - css - styles
   - home-styles.css - stylesheet for index.php
-  - sign-forms.css - stylesheet for sign-in.php and sign-up.php
+  - forms.css - stylesheet for sign-in.php and sign-up.php 
   - panel.css - (TODO)
 - database - contains NibbaHotel project database in MySQL (available for import into phpMyAdmin - XAMPP component)
 - favicon - contains favicon for all pages
