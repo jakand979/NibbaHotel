@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #2c272b; /* TO CHANGE */
+    min-height: 100vh;
+    background-color: #2c272b;
 }
 
 .home-nav-container {
@@ -87,8 +92,8 @@ body {
     position: relative;
     bottom: 30px;
     left: 50%;
-    transform: translateX(-50%);
     width: 100%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,8 +120,8 @@ body {
 .about-us {
     position: relative;
     bottom: 2vh;
+    height: 70vh;
     width: 100vw;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,9 +131,17 @@ body {
 }
 
 .about-us h1 {
-    margin-bottom: 11vh;
-    color: #ffff00;
+    height: 6vh;
+    width: 25vw;
+    margin-bottom: 7.5vh;
+    padding: 10px 10px 10px 10px;
+    background-color: #f4dfb6;
+    border-color: #2c272b;
+    border-radius: 10px;
+    border-style: solid;
+    color: #0978bf;
     font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
 
 .about-us span {
@@ -136,17 +149,56 @@ body {
     margin-right: 5vw;
     padding: 0.5vw;
     background-color: #f4dfb6;
+    border-color: #2c272b;
+    border-style: solid;
+    border-radius: 10px;
     color: #0978bf;
     font-family: 'Poppins', sans-serif;
 }
 
-/* TO CHANGE */
-footer {
+.facilites {
     position: relative;
-    bottom: 20px;
+    bottom: 4.5vh;
+    height: 40vh;
     display: flex;
-    height: 30vh;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f4dfb6;
+}
+
+.item {
+    height: 10vh;
+}
+
+.footer-style {
+    position: relative;
+    bottom:0;
+    height: 15vh;
     width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 1vw;
     background-color: #2c272b;
+    color: #0978bf;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-style img {
+    margin-top: 1vh;
+    margin-left: 5vw;
+    transform: scale(1.1);
+}
+
+.footer-item {
+    height: 5vh;
     margin-bottom: 5vh;
 }
+
+p {
+    margin-top: 4vh;
+    margin-right: 10vw;
+}
+
