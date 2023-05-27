@@ -5,7 +5,7 @@ body {
     padding: 0;
 }
 
-.sign-container {
+.container {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -28,11 +28,6 @@ img {
     height: 25vh;
 }
 
-h2 {
-    margin-bottom: 25px;
-    color: #2c272b;
-}
-
 input {
     width: 100%;
     margin-bottom: 10px;
@@ -47,6 +42,8 @@ input {
     color: #2c272b;
     font-style: italic;
     font-weight: bold;
+    text-align: left;
+
 }
 
 select {
@@ -104,6 +101,21 @@ button:active {
     margin-top: 5px;
     color: #e34234;
     font-size: 15px;
+}
+
+.contact-message {
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+textarea {
+    height: 20vh;
+    width: 100%;
+    padding: 12.5px;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
 }
 
 

@@ -8,13 +8,12 @@
     <title>Nibba Hotel</title>
 </head>
 <body>
-    <div class="sign-container">
+    <div class="container">
         <?php
             include('scripts/register.php');
         ?>
         <form id="sign-up-form" action="" method="post">
-            <img src="images/hotel-sign.png" alt="hotel_sign">
-            <h2>NIBBA HOTEL</h2>
+            <a href="index.php"><img src="images/hotel-sign.png" alt="hotel_sign"></a>
             <input type="text" name="login" placeholder="login" required
                 <?php if (isset($errors['login'])) echo 'class="error"'; ?>>
             <input type="text" name="email" placeholder="e-mail" required

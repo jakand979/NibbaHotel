@@ -11,10 +11,9 @@
     <?php
         include('scripts/login.php');
     ?>
-    <div class="sign-container">
+    <div class="container">
         <form id="sign-in-form" action="" method="post">
-            <img src="images/hotel-sign.png" alt="hotel_sign">
-            <h2>NIBBA HOTEL</h2>
+            <a href="index.php"><img src="images/hotel-sign.png" alt="hotel_sign"></a>
             <input type="text" name="login" placeholder="login" required
                 <?php if(isset($errors['username'])) echo 'class="error"'; ?>>
             <input type="password" name="password" placeholder="password" required
