@@ -1,15 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-html {
-    height: 100%;
-}
-
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    min-height: 100vh;
     background-color: #2c272b;
 }
 
