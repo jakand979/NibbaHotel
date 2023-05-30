@@ -38,18 +38,18 @@
     </div>
     <div class="about-us">
         <h1>Welcome to Sunny Hotel Nibba!</h1>
-        <span>We were here since <b><u>1969</u></b>, to serve our visitors the best! We have <b><u>multiple hotels</u></b> in various <b><u>coastal regions</u></b> around the <b><u>world</u></b>!
-            We want to invite you to an <b><u>unforgettable experience</u></b> at our luxurious oasis of relaxation, where the sun, beautiful beaches, and <b><u>excellent service</u></b> create a <b><u>unique atmosphere</u></b> of comfort and pleasure.
-            As you step through our doors, you will be greeted by our <b><u>friendly staff</u></b>, ready to fulfill your every wish.
-            Our <b><u>elegant lobbies</u></b> impress with their spaciousness and décor inspired by the local culture, creating an atmosphere of tranquility and comfort.
-            Sunny <b><u>Hotel Nibba</u></b> offers a <b><u>wide selection</u></b> of luxury rooms and suites, designed with <b><u>meticulous attention</u></b> to detail.
-            Each room is spacious, air-conditioned, and equipped with <b><u>state-of-the-art amenities</u></b> such as a flat-screen TV, minibar, and complimentary Wi-Fi.
-            Moreover, most of our rooms feature <b><u>private balcony</u></b> with <b><u>sea views</u></b>, where you can relax and enjoy the <b><u>breathtaking scenery</u></b>.
-            Our <b><u>pool complexes</u></b> are a <b><u>true haven</u></b> for water enthusiasts. Immerse yourself in our stunning <b><u>Olympic-sized pools</u></b>, unwind in the <b><u>jacuzzis</u></b>, or enjoy <b><u>refreshing drinks</u></b> at our poolside bars.
-            For those who prefer direct contact with the sea, we invite you to our private beaches, where white sand and turquoise water provide <b><u>unforgettable moments</u></b> of relaxation and pleasure.
-            Our restaurants are a <b><u>true paradise</u></b> for your taste buds.
-            Our <b><u>talented teams</u></b> of chefs serves international and local cuisine, prepared with the <b><u>freshest ingredients</u></b>.
-            In our <b><u>elegant interiors</u></b> or on the restaurant terraces, you can indulge in <b><u>exquisite dishes</u></b> and <b><u>fine wines</u></b> that enhance the flavor of your <b><u>exceptional stay</u></b>.</span>
+        <span>We were here since <b>1969</b>, to serve our visitors the best! We have <b>multiple hotels</b> in various <b>coastal regions</b> around the <b>world</b>!
+            We want to invite you to an <b>unforgettable experience</b> at our luxurious oasis of relaxation, where the sun, beautiful beaches, and <b>excellent service</b> create a <b>unique atmosphere</b> of comfort and pleasure.
+            As you step through our doors, you will be greeted by our <b>friendly staff</b>, ready to fulfill your every wish.
+            Our <b>elegant lobbies</b> impress with their spaciousness and décor inspired by the local culture, creating an atmosphere of tranquility and comfort.
+            Sunny <b>Hotel Nibba</b> offers a <b>wide selection</b> of luxury rooms and suites, designed with <b>meticulous attention</b> to detail.
+            Each room is spacious, air-conditioned, and equipped with <b>state-of-the-art amenities</b> such as a flat-screen TV, minibar, and complimentary Wi-Fi.
+            Moreover, most of our rooms feature <b>private balcony</b> with <b>sea views</b>, where you can relax and enjoy the <b>breathtaking scenery</b>.
+            Our <b>pool complexes</b> are a <b>true haven</b> for water enthusiasts. Immerse yourself in our stunning <b>Olympic-sized pools</b>, unwind in the <b>jacuzzis</b>, or enjoy <b>refreshing drinks</b> at our poolside bars.
+            For those who prefer direct contact with the sea, we invite you to our private beaches, where white sand and turquoise water provide <b>unforgettable moments</b> of relaxation and pleasure.
+            Our restaurants are a <b>true paradise</b> for your taste buds.
+            Our <b>talented teams</b> of chefs serves international and local cuisine, prepared with the <b>freshest ingredients</b>.
+            In our <b>elegant interiors</b> or on the restaurant terraces, you can indulge in <b>exquisite dishes</b> and <b>fine wines</b> that enhance the flavor of your <b>exceptional stay</b>.</span>
     </div>
     <div class="facilites">
         <img src="images/hotel.png" class="item" alt="wifi_sign">
@@ -68,7 +68,7 @@
         <img src="images/phone-call.png" class="footer-item" alt="phone_call">
         <p class="footer-item">(555) 555-1234</p>
         <img src="images/email.png" class="footer-item" alt="phone_call">
-        <p class="footer-item">hotelnibba.global@hotels.com</p>
+        <p class="footer-item">nibba.contact@travel.com</p>
     </footer>
 </body>
 </html>

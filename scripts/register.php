@@ -43,8 +43,10 @@ if (isset($_POST['login']) && isset($_POST['email']) && isset($_POST['roles']) &
             $hashedUserPassword = hash('sha256', $userPassword);
 
             $register_query = "INSERT INTO users (id, password, created_at, role_id, email, username) 
-            VALUES (NULL, '$hashedUserPassword', current_timestamp(), '$role', '$userEmail', '$userLogin');";
-            $result = $conn->query($register_query);
+            VALUES (NULL, ?, current_timestamp(), ?, ?, ?);";
+            $stmt = $conn->prepare($register_query);
+            $stmt->bind_param("siss", $hashedUserPassword, $role, $userEmail, $userLogin);
+            $result = $stmt->execute();
 
             if ($result) {
                 sleep(1);

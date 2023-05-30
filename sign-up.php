@@ -15,18 +15,28 @@
         <form id="sign-up-form" action="" method="post">
             <a href="index.php"><img src="images/hotel-sign.png" alt="hotel_sign"></a>
             <input type="text" name="login" placeholder="login" required
-                <?php if (isset($errors['login'])) echo 'class="error"'; ?>>
+                <?php if (isset($errors['login'])) {
+                    echo 'class="error"';
+                } ?>>
             <input type="text" name="email" placeholder="e-mail" required
-                <?php if (isset($errors['email'])) echo 'class="error"'; ?>>
+                <?php if (isset($errors['email'])) {
+                    echo 'class="error"';
+                } ?>>
             <select name="roles">
                 <option value="1">admin</option>
                 <option value="2">user</option>
             </select>
             <input type="password" name="password" placeholder="password" required
-                <?php if (isset($errors['password'])) echo 'class="error"'; ?>
-                <?php if (isset($errors['password2'])) echo 'class="error"'; ?>>
+                <?php if (isset($errors['password'])) {
+                    echo 'class="error"';
+                } ?>
+                <?php if (isset($errors['password2'])) {
+                    echo 'class="error"';
+                } ?>>
             <input type="password" name="password2"
-                <?php if (isset($errors['password2'])) echo 'class="error"'; ?> placeholder="repeat password" required>
+                <?php if (isset($errors['password2'])) {
+                    echo 'class="error"';
+                } ?> placeholder="repeat password" required>
             <?php if (isset($errors['login'])) echo '<span class="error-message">' . $errors['login'] . '</span>'; ?>
             <?php if (isset($errors['email'])) echo '<span class="error-message">' . $errors['email'] . '</span>'; ?>
             <?php if (isset($errors['password'])) echo '<span class="error-message">' . $errors['password'] . '</span>'; ?>

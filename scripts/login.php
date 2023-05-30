@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $host = 'localhost';
 $dbusername = 'root';
@@ -8,13 +9,13 @@ $dbname = 'hotel_booking';
 $errors = array();
 
 if (isset($_POST['login']) && isset($_POST['password'])) {
-    $userLogin = $_POST['login'];
-    $userPassword = $_POST['password'];
-
     $conn = mysqli_connect($host, $dbusername, $dbpassword, $dbname);
     if ($conn->connect_error) {
         die('Failed to connect with database: ' . $conn->connect_error);
     }
+
+    $userLogin = $_POST['login'];
+    $userPassword = $_POST['password'];
 
     $query = "SELECT * FROM users WHERE username = ?";
     $stmt = $conn->prepare($query);
@@ -30,6 +31,17 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
         $storedPassword = $row['password'];
 
         if ($hashedUserPassword == $storedPassword) {
+
+            $_SESSION['loggedin'] = true;
+            $_SESSION['username'] = $userLogin;
+
+            $get_userid = "SELECT user_id FROM users WHERE username = ?";
+            $stmt = $conn->prepare($get_userid);
+            $stmt->bind_param("s", $userLogin);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $_SESSION['userid'] = $result;
+
             $role_query = "SELECT role_id FROM users WHERE username = ?";
             $stmt = $conn->prepare($role_query);
             $stmt->bind_param("s", $userLogin);
@@ -40,6 +52,14 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
             $storedRole = $row['role_id'];
 
             if ($storedRole == 1) {
+                $_SESSION['loggedin'] = true;
+                $_SESSION['username'] = $userLogin;
+                $get_userid = "SELECT user_id FROM users WHERE username = ?";
+                $stmt = $conn->prepare($get_userid);
+                $stmt->bind_param("s", $userLogin);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                $_SESSION['userid'] = $result;
                 sleep(1);
                 echo '<script>window.location.href = "http://localhost/NibbaHotel/admin-panel.php";</script>';
                 exit();

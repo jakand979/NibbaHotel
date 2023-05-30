@@ -103,11 +103,6 @@ button:active {
     font-size: 15px;
 }
 
-.contact-message {
-    margin-top: 5px;
-    margin-bottom: 30px;
-}
-
 textarea {
     height: 20vh;
     width: 100%;
@@ -116,6 +111,12 @@ textarea {
     border-radius: 15px;
     border-style: solid;
     outline: none;
+}
+
+.success-message {
+    margin-top: 5px;
+    color: #28a745;
+    font-size: 15px;
 }
 
 
