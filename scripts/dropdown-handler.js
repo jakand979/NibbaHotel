@@ -1,7 +1,7 @@
 function redirectToPage() {
     var selectBox = document.getElementById("dropdown");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-
+    selectBox.selectedIndex = 0;
     if (selectedValue !== "") {
         if (selectedValue !== "profile.php") {
             window.location.href = selectedValue;
@@ -9,9 +9,5 @@ function redirectToPage() {
             window.location.href = selectedValue;
         }
     }
-}
 
-function removeDefaultOption() {
-    var selectBox = document.getElementById("dropdown");
-    selectBox.remove(0);
 }

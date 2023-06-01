@@ -25,7 +25,7 @@
             $username = $_SESSION['username'];
             echo '
             <select class="click-me-dropdown" id="dropdown" onchange="redirectToPage()">
-                <option disabled selected>' . $username . '!</option>
+                <option hidden selected>' . $username . '</option>
                 <option value="profile.php">PROFILE</option>
                 <option value="logout.php">LOGOUT</option>
             </select>
