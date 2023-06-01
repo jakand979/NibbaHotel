@@ -3,7 +3,32 @@ body {
     padding: 0;
 }
 
+.gallery-nav {
+    height: 17.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f4dfb6;
+}
 
+.gallery-nav img {
+    height: 17.5vh;
+}
 
+.collage {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+}
 
-
+.collage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

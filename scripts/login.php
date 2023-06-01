@@ -52,14 +52,7 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
             $storedRole = $row['role_id'];
 
             if ($storedRole == 1) {
-                $_SESSION['loggedin'] = true;
-                $_SESSION['username'] = $userLogin;
-                $get_userid = "SELECT user_id FROM users WHERE username = ?";
-                $stmt = $conn->prepare($get_userid);
-                $stmt->bind_param("s", $userLogin);
-                $stmt->execute();
-                $result = $stmt->get_result();
-                $_SESSION['userid'] = $result;
+
                 sleep(1);
                 echo '<script>window.location.href = "http://localhost/NibbaHotel/admin-panel.php";</script>';
                 exit();
