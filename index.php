@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="libraries/slick.min.js"></script>
     <script src="scripts/slider.js"></script>
+    <script src="scripts/dropdown-handler.js"></script>
 </head>
 <body>
     <nav class="home-nav-container">
@@ -18,7 +19,21 @@
         <a class="nav-links" href="bookings.php">BOOK ONLINE</a>
         <a class="nav-links" href="favourites.php">FAVOURITES</a>
         <a class="nav-links" href="contact.php">CONTACT US</a>
-        <a href="sign-in.php"><button class="click-me">SIGN IN</button></a>
+        <?php
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $username = $_SESSION['username'];
+            echo '
+            <select class="click-me-dropdown" id="dropdown" onchange="redirectToPage()">
+                <option disabled selected>' . $username . '!</option>
+                <option value="profile.php">PROFILE</option>
+                <option value="logout.php">LOGOUT</option>
+            </select>
+            ';
+        } else {
+            echo '<a href="sign-in.php"><button class="click-me">SIGN IN</button></a>';
+        }
+        ?>
     </nav>
     <div class="slider">
         <div><img src="images/img1.png" alt="first_image"></div>

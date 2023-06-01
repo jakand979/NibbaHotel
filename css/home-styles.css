@@ -198,3 +198,14 @@ p {
     margin-right: 10vw;
 }
 
+.click-me-dropdown {
+    height: 5vh;
+    width: 7.5vw;
+    border-color: #0978bf;
+    border-style: solid;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+}
