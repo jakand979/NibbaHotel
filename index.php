@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <link rel="icon" type="image/ico" href="favicon/favicon.ico">
@@ -23,6 +24,8 @@
         session_start();
         if (isset($_SESSION['username'])) {
             $username = $_SESSION['username'];
+            $email = $_SESSION['email'];
+            $role_name = $_SESSION['role_name'];
             echo '
             <select class="click-me-dropdown" id="dropdown" onchange="redirectToPage()">
                 <option hidden selected>' . $username . '</option>
@@ -30,6 +33,7 @@
                 <option value="logout.php">LOGOUT</option>
             </select>
             ';
+
         } else {
             echo '<a href="sign-in.php"><button class="click-me">SIGN IN</button></a>';
         }

@@ -43,6 +43,23 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
 
             $_SESSION['username'] = $userLogin;
 
+            $email_query = "SELECT email FROM users WHERE username = ?";
+            $stmt = $conn->prepare($email_query);
+            $stmt->bind_param("s", $userLogin);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $email_row = $result->fetch_assoc();
+            $_SESSION['email'] = $email_row['email'];
+
+            $role_name_query = "SELECT name FROM roles INNER JOIN users 
+            ON users.role_id = roles.role_id WHERE username = ?";
+            $stmt = $conn->prepare($role_name_query);
+            $stmt->bind_param("s", $userLogin);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $role_row = $result->fetch_assoc();
+            $_SESSION['role_name'] = $role_row['name'];
+
             if ($storedRole == 1) {
                 $conn->close();
                 sleep(1);

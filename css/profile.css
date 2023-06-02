@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4dfb6;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4dfb6;
+    opacity: 0.9;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container img {
+    height: 17.5vh;
+}
+
+.profile {
+    height: 30vh;
+    width: 30vw;
+    margin-top: 5vh;
+    padding: 1vw;
+    background-color: #FFFFFF;
+    border-color: #0978bf;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+p {
+    position: relative;
+    top: -15px;
+    font-size: 24px;
+}
+
+.btn {
+    position: relative;
+    top: -40px;
+    margin-top: 5vh;
+    margin-right: 20px;
+    height: 6vh;
+    width: 7vw;
+    background-color: #FFFFFF;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+}
+
+.btn:active {
+    transform: translateY(5px);
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    margin-top: 3vh;
+    padding: 1vw;
+    background-color: #FFFFFF;
+    border-color: #0978bf;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.contact input {
+    margin-top: 2.5vh;
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 12.5px;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+}
+
+::placeholder {
+    color: #2c272b;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+}
