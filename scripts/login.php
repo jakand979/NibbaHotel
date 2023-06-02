@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 $host = 'localhost';
@@ -43,10 +44,12 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
             $_SESSION['username'] = $userLogin;
 
             if ($storedRole == 1) {
+                $conn->close();
                 sleep(1);
                 echo '<script>window.location.href = "http://localhost/NibbaHotel/admin-panel.php";</script>';
                 exit();
             } else {
+                $conn->close();
                 sleep(1);
                 echo '<script>window.location.href = "http://localhost/NibbaHotel";</script>';
                 exit();

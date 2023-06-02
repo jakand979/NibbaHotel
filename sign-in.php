@@ -14,11 +14,11 @@
     <div class="container">
         <form id="sign-in-form" action="" method="post">
             <a href="index.php"><img src="images/hotel-sign.png" alt="hotel_sign"></a>
-            <input type="text" name="login" placeholder="login" required
+            <input type="text" name="login" placeholder="login" maxlength="255" required
                 <?php if (isset($errors['username'])) {
                     echo 'class="error"';
                 } ?>>
-            <input type="password" name="password" placeholder="password" required
+            <input type="password" name="password" placeholder="password" maxlength="255" required
                 <?php if (isset($errors['password'])) {
                     echo 'class="error"';
                 } ?>>

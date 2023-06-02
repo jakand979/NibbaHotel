@@ -6,7 +6,7 @@ $dbpassword = '';
 $dbname = 'hotel_booking';
 
 $successmsg = array();
-$errors = array();
+$error = array();
 
 if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])) {
     $conn = mysqli_connect($host, $dbusername, $dbpassword, $dbname);
@@ -18,7 +18,20 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
     $userEmail = $_POST['email'];
     $msg = $_POST['message'];
 
-    $contact_query = "INSERT INTO forms (id, user_id, name, email, message) 
-            VALUES (NULL, ?, current_timestamp(), ?, ?, ?);";
+    $contact_query = "INSERT INTO forms (id, name, email, message) 
+            VALUES (NULL, ?, ?, ?);";
+    $stmt = $conn->prepare($contact_query);
+    $stmt->bind_param("sss", $userName, $userEmail, $msg);
+    $result = $stmt->execute();
+
+    if ($result) {
+        $successmsg['success'] = 'Contact form sent successfully!';
+    } else {
+        $error['notsent'] = 'We had problems with receiving your message. Try later!';
+    }
+
+    $conn->close();
 
 }
+
+?>

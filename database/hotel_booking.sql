@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 27 Maj 2023, 06:59
+-- Czas generowania: 02 Cze 2023, 15:45
 -- Wersja serwera: 10.4.27-MariaDB
 -- Wersja PHP: 8.2.0
 
@@ -87,11 +87,19 @@ CREATE TABLE `favourites` (
 
 CREATE TABLE `forms` (
   `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Zrzut danych tabeli `forms`
+--
+
+INSERT INTO `forms` (`id`, `name`, `email`, `message`) VALUES
+(1, 'Maliniak123', 'nygusowaty@gmail.com', 'Nibba Hotel has always emphasized the importance of friendly staff ready to fulfill every wish. However, recent encounters have left me questioning this claim. What measures are being taken to ensure that the staff maintains a warm and welcoming attitude towards guests? How does Nibba Hotel plan to address the disconnect that has been observed between the promises made and the actual experience provided?'),
+(2, 'BiggestFan123', 'my.mail@interia.pl', 'What are the prices for monthly subscription for your hotels? I need quick answer.'),
+(3, 'Menik234', 'elo320@gmail.com', 'What is your staff salary? I want to join your staff in current time, and i am very interested in this position. Salamalejkum braders.');
 
 -- --------------------------------------------------------
 
@@ -181,7 +189,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `password`, `created_at`, `role_id`, `email`, `username`) VALUES
 (1, 'a386b3f0b2735fcb169ccf66ebee025d0cc487ce89962a56c7388be9e481e3b4', '2023-05-24 18:33:10', 1, 'jakand979@gmail.com', 'jakand979'),
-(2, 'e606e38b0d8c19b24cf0ee3808183162ea7cd63ff7912dbb22b5e803286b4446', '2023-05-27 04:58:32', 2, 'jak.and@interia.pl', 'user123');
+(2, 'e606e38b0d8c19b24cf0ee3808183162ea7cd63ff7912dbb22b5e803286b4446', '2023-05-27 04:58:32', 2, 'jak.and@interia.pl', 'user123'),
+(3, '9263cb0b1c7ec9e84973f6659a8e568fa42a702d0c2d505b054198ec7a0ac19d', '2023-05-30 17:55:32', 2, 'nygusowaty@gmail.com', 'nygus123');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -223,8 +232,7 @@ ALTER TABLE `favourites`
 -- Indeksy dla tabeli `forms`
 --
 ALTER TABLE `forms`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeksy dla tabeli `hotels`
@@ -292,7 +300,7 @@ ALTER TABLE `favourites`
 -- AUTO_INCREMENT dla tabeli `forms`
 --
 ALTER TABLE `forms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `hotels`
@@ -304,7 +312,7 @@ ALTER TABLE `hotels`
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ograniczenia dla zrzutów tabel
@@ -337,12 +345,6 @@ ALTER TABLE `contacts`
 ALTER TABLE `favourites`
   ADD CONSTRAINT `favourites_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `favourites_ibfk_2` FOREIGN KEY (`hotel_id`) REFERENCES `hotels` (`id`);
-
---
--- Ograniczenia dla tabeli `forms`
---
-ALTER TABLE `forms`
-  ADD CONSTRAINT `forms_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Ograniczenia dla tabeli `users`
