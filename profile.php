@@ -22,13 +22,23 @@
                 echo '
                 <p>Login: ' . $username .'</p>
                 <p>Email: ' . $email .'</p>
-                <button type="button" class="btn add-contact">ADD CONTACT</button>
-                <button type="button" class="btn add-address">ADD ADDRESS</button>
                 ';
             }
             ?>
         </div>
-
+        <div class="contact">
+            <input type="text" placeholder="contact type" minlength="1" maxlength="20">
+            <input type="text" placeholder="phone" minlength="1" maxlength="20">
+            <button type="submit">SUBMIT</button>
+        </div>
+        <div class="address">
+            <input type="text" placeholder="street" maxlength="255" required>
+            <input type="text" placeholder="city" maxlength="255" required>
+            <input type="number" placeholder="home number" maxlength="10" required>
+            <input type="text" placeholder="zipcode" maxlength="50" required>
+            <input type="text" placeholder="adress type" maxlength="20" required>
+            <button type="button" class="accept-btn-2">SUBMIT</button>
+        </div>
     </div>
 </body>
 </html>
