@@ -9,5 +9,4 @@ function redirectToPage() {
             window.location.href = selectedValue;
         }
     }
-
 }

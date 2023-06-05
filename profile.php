@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nibba Hotel</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts/addContactAdress.js"></script>
+    <script src="scripts/addContact.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,11 +18,10 @@
             if (isset($_SESSION['username'])) {
                 $username = $_SESSION['username'];
                 $email = $_SESSION['email'];
-                $role_name = $_SESSION['role_name'];
+                $user_id = $_SESSION['user_id'];
                 echo '
                 <p>Login: ' . $username .'</p>
                 <p>Email: ' . $email .'</p>
-                <p>Role: ' . $role_name .'</p>
                 <button type="button" class="btn add-contact">ADD CONTACT</button>
                 <button type="button" class="btn add-address">ADD ADDRESS</button>
                 ';

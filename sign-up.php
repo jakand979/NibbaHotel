@@ -22,10 +22,6 @@
                 <?php if (isset($errors['email'])) {
                     echo 'class="error"';
                 } ?>>
-            <select name="roles">
-                <option value="1">admin</option>
-                <option value="2">user</option>
-            </select>
             <input type="password" name="password" placeholder="password" maxlength="255" required
                 <?php if (isset($errors['password'])) {
                     echo 'class="error"';
@@ -37,10 +33,10 @@
                 <?php if (isset($errors['password2'])) {
                     echo 'class="error"';
                 } ?>>
+            <?php if (isset($errors['database'])) echo '<span class="error-message">' . $errors['database'] . '</span>'; ?>
             <?php if (isset($errors['login'])) echo '<span class="error-message">' . $errors['login'] . '</span>'; ?>
             <?php if (isset($errors['email'])) echo '<span class="error-message">' . $errors['email'] . '</span>'; ?>
             <?php if (isset($errors['password'])) echo '<span class="error-message">' . $errors['password'] . '</span>'; ?>
-            <?php if (isset($errors['database'])) echo '<span class="error-message">' . $errors['database'] . '</span>'; ?>
             <?php if (isset($errors['password2'])) echo '<span class="error-message">' . $errors['password2'] . '</span>'; ?>
             <a href="sign-in.php">Have account yet? <b>Sign in!</b></a>
         </form>

@@ -25,7 +25,7 @@
         if (isset($_SESSION['username'])) {
             $username = $_SESSION['username'];
             $email = $_SESSION['email'];
-            $role_name = $_SESSION['role_name'];
+            $user_id = $_SESSION['user_id'];
             echo '
             <select class="click-me-dropdown" id="dropdown" onchange="redirectToPage()">
                 <option hidden selected>' . $username . '</option>

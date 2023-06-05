@@ -15,8 +15,8 @@ if ($conn->connect_error) {
 $errors = array();
 
 if (isset($_POST['login']) && isset($_POST['password'])) {
-    $userLogin = $_POST['login'];
-    $userPassword = $_POST['password'];
+    $userLogin = htmlspecialchars(trim($_POST['login']), ENT_QUOTES,'UTF-8');
+    $userPassword = htmlspecialchars(trim($_POST['password']), ENT_QUOTES,'UTF-8');
 
     $query = "SELECT * FROM users WHERE username = ?";
     $stmt = $conn->prepare($query);
@@ -24,6 +24,7 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
     $stmt->execute();
     $result = $stmt->get_result();
 
+    $stmt->close();
 
     if ($result->num_rows == 1) {
         $hashedUserPassword = hash('sha256', $userPassword);
@@ -39,7 +40,9 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
             $result = $stmt->get_result();
 
             $role_row = $result->fetch_assoc();
-            $storedRole = $row['role_id'];
+            $storedRole = $role_row['role_id'];
+
+            $stmt->close();
 
             $_SESSION['username'] = $userLogin;
 
@@ -48,17 +51,23 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
             $stmt->bind_param("s", $userLogin);
             $stmt->execute();
             $result = $stmt->get_result();
+
             $email_row = $result->fetch_assoc();
             $_SESSION['email'] = $email_row['email'];
 
-            $role_name_query = "SELECT name FROM roles INNER JOIN users 
-            ON users.role_id = roles.role_id WHERE username = ?";
-            $stmt = $conn->prepare($role_name_query);
+            $stmt->close();
+
+
+            $user_id_query = "SELECT id FROM users WHERE username = ?";
+            $stmt = $conn->prepare($user_id_query);
             $stmt->bind_param("s", $userLogin);
             $stmt->execute();
             $result = $stmt->get_result();
+
             $role_row = $result->fetch_assoc();
-            $_SESSION['role_name'] = $role_row['name'];
+            $_SESSION['user_id'] = $role_row['id'];
+
+            $stmt->close();
 
             if ($storedRole == 1) {
                 $conn->close();

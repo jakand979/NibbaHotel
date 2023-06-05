@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-        include('scripts/contact-form.php');
+        include('scripts/contact-us.php');
     ?>
     <div class="container">
         <form id="contact-form" action="" method="post">

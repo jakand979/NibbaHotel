@@ -14,9 +14,9 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
         die('Failed to connect with database: ' . $conn->connect_error);
     }
 
-    $userName = $_POST['name'];
-    $userEmail = $_POST['email'];
-    $msg = $_POST['message'];
+    $userName = htmlspecialchars(trim($_POST['name']), ENT_QUOTES,'UTF-8');
+    $userEmail = htmlspecialchars(trim($_POST['email']), ENT_QUOTES,'UTF-8');
+    $msg = htmlspecialchars(trim($_POST['message']), ENT_QUOTES,'UTF-8');
 
     $contact_query = "INSERT INTO forms (id, name, email, message) 
             VALUES (NULL, ?, ?, ?);";
