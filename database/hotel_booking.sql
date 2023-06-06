@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 02 Cze 2023, 21:40
--- Wersja serwera: 10.4.27-MariaDB
--- Wersja PHP: 8.2.0
+-- Czas generowania: 06 Cze 2023, 23:50
+-- Wersja serwera: 10.4.20-MariaDB
+-- Wersja PHP: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,11 +31,18 @@ CREATE TABLE `addresses` (
   `id` int(11) NOT NULL,
   `street` varchar(255) DEFAULT NULL,
   `city` varchar(255) NOT NULL,
-  `homenumber` int(10) NOT NULL,
+  `homenumber` varchar(20) NOT NULL,
   `zipcode` varchar(50) NOT NULL,
   `type` varchar(20) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `addresses`
+--
+
+INSERT INTO `addresses` (`id`, `street`, `city`, `homenumber`, `zipcode`, `type`, `user_id`) VALUES
+(2, 'Dąbrówka 10', 'Kłodawa', '10', '62-650', 'mailing address', 2);
 
 -- --------------------------------------------------------
 
@@ -52,7 +59,7 @@ CREATE TABLE `bookings` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `status_id` int(11) NOT NULL,
   `payment_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -65,7 +72,15 @@ CREATE TABLE `contacts` (
   `type` varchar(20) NOT NULL,
   `phone` varchar(20) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `type`, `phone`, `user_id`) VALUES
+(20, 'mobile phone', '123 456 782', 2),
+(21, 'landline phone', '123 456 789', 2);
 
 -- --------------------------------------------------------
 
@@ -77,7 +92,7 @@ CREATE TABLE `favourites` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `hotel_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -90,7 +105,7 @@ CREATE TABLE `forms` (
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `message` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `forms`
@@ -114,7 +129,7 @@ CREATE TABLE `hotels` (
   `phone` varchar(20) NOT NULL,
   `description` text NOT NULL,
   `image_url` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -127,7 +142,7 @@ CREATE TABLE `payments` (
   `method` varchar(20) NOT NULL,
   `amount` double NOT NULL,
   `status` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -138,7 +153,7 @@ CREATE TABLE `payments` (
 CREATE TABLE `roles` (
   `role_id` int(11) NOT NULL,
   `name` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `roles`
@@ -157,7 +172,7 @@ INSERT INTO `roles` (`role_id`, `name`) VALUES
 CREATE TABLE `statuses` (
   `status_id` int(11) NOT NULL,
   `name` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `statuses`
@@ -181,7 +196,7 @@ CREATE TABLE `users` (
   `role_id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `users`
@@ -276,7 +291,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT dla tabeli `addresses`
 --
 ALTER TABLE `addresses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `bookings`
@@ -288,7 +303,7 @@ ALTER TABLE `bookings`
 -- AUTO_INCREMENT dla tabeli `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT dla tabeli `favourites`
