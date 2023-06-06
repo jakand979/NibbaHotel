@@ -52,9 +52,9 @@ if (isset($_POST['login']) && isset($_POST['email']) && isset($_POST['roles']) &
             $stmt->close();
 
             if ($result) {
+                $conn->close();
                 sleep(1);
                 echo '<script>window.location.href = "http://localhost/NibbaHotel/sign-in.php";</script>';
-                exit();
             } else {
                 $errors['database'] = 'Failed to register user. Please try again later.';
             }

@@ -6,22 +6,22 @@ body {
 }
 
 .container {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     background-color: #f4dfb6;
     opacity: 0.9;
     font-family: 'Open Sans', sans-serif;
 }
 
 form {
-    width: 20vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 20vw;
 }
 
 img {
@@ -43,25 +43,6 @@ input {
     font-style: italic;
     font-weight: bold;
     text-align: left;
-}
-
-select {
-    width: 108%;
-    margin-bottom: 10px;
-    padding: 12.5px;
-    border-color: #0978bf;
-    border-radius: 15px;
-    border-style: solid;
-    outline: none;
-    color: #2c272b;
-    font-style: italic;
-    font-weight: bold;
-}
-
-option {
-    color: #2c272b;
-    font-style: italic;
-    font-weight: bold;
 }
 
 a {
@@ -94,6 +75,7 @@ button:active {
     background-color: #e34234;
     border-color: #e34234;
     color: #ffff00;
+    font-weight: bold;
 }
 
 .error-message {
@@ -117,6 +99,7 @@ textarea {
     color: #28a745;
     font-size: 15px;
 }
+
 
 
 

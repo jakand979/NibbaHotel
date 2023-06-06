@@ -24,8 +24,6 @@
         session_start();
         if (isset($_SESSION['username'])) {
             $username = $_SESSION['username'];
-            $email = $_SESSION['email'];
-            $user_id = $_SESSION['user_id'];
             echo '
             <select class="click-me-dropdown" id="dropdown" onchange="redirectToPage()">
                 <option hidden selected>' . $username . '</option>
@@ -33,7 +31,6 @@
                 <option value="logout.php">LOGOUT</option>
             </select>
             ';
-
         } else {
             echo '<a href="sign-in.php"><button class="click-me">SIGN IN</button></a>';
         }

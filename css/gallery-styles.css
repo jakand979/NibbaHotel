@@ -4,11 +4,12 @@ body {
 }
 
 .gallery-nav {
-    height: 17.5vh;
-    width: 100%;
     display: flex;
     justify-content: center;
+    height: 17.5vh;
+    width: 100%;
     background-color: #f4dfb6;
+    opacity: 0.9;
 }
 
 .gallery-nav img {
