@@ -3,6 +3,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #f4dfb6;
 }
 
 .container {
@@ -18,6 +19,12 @@ body {
 
 .container img {
     height: 10vh;
+}
+
+p {
+    margin-right: auto;
+    margin-bottom: auto;
+    font-size: 20px;
 }
 
 .contact {
@@ -45,13 +52,6 @@ body {
     outline: none;
 }
 
-p {
-    margin-right: auto;
-    margin-bottom: auto;
-    font-size: 20px;
-}
-
-
 .address {
     display: flex;
     flex-direction: column;
@@ -77,4 +77,10 @@ p {
     border-radius: 15px;
     border-style: solid;
     outline: none;
+}
+
+.error-message {
+    margin-left: auto;
+    color: #e34234;
+    font-size: 15px;
 }

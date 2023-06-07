@@ -28,9 +28,9 @@ while ($row = $result->fetch_assoc()) {
     '<div class="contact">
         <p>Contact type: ' . $contactType . '</p>
         <p>Phone: ' . $phone . '</p>
-        <form action="delete-data.php" method="post">
+        <form action="scripts/delete-data.php" method="post">
             <input type="hidden" name="contact_id" value="' . $contact_id . '">
-            <button type="submit" name="delete_contact">DELETE</button>
+            <button type="submit">DELETE</button>
         </form>
     </div>';
 }
@@ -57,9 +57,9 @@ while ($row = $result->fetch_assoc()) {
         <p>Home number: ' . $homenumber . '</p>
         <p>Zipcode: ' . $zipcode . '</p>   
         <p>Adress type: ' . $addressType . '</p>     
-        <form action="delete-data.php" method="post">
-            <input type="hidden" name="contact_id" value="' . $contact_id . '">
-            <button type="submit" name="delete_contact">DELETE</button>
+        <form action="scripts/delete-data.php" method="post">
+            <input type="hidden" name="address_id" value="' . $address_id . '">
+            <button type="submit">DELETE</button>
         </form>     
     </div>';
 }
