@@ -21,12 +21,17 @@ $result = $stmt->get_result();
 $stmt->close();
 
 while ($row = $result->fetch_assoc()) {
+    $contact_id = $row['id'];
     $contactType = $row['type'];
     $phone = $row['phone'];
     echo
     '<div class="contact">
         <p>Contact type: ' . $contactType . '</p>
         <p>Phone: ' . $phone . '</p>
+        <form action="delete-data.php" method="post">
+            <input type="hidden" name="contact_id" value="' . $contact_id . '">
+            <button type="submit" name="delete_contact">DELETE</button>
+        </form>
     </div>';
 }
 
@@ -39,6 +44,7 @@ $result = $stmt->get_result();
 $stmt->close();
 
 while ($row = $result->fetch_assoc()) {
+    $address_id = $row['id'];
     $street = $row['street'];
     $city = $row['city'];
     $homenumber = $row['homenumber'];
@@ -50,7 +56,11 @@ while ($row = $result->fetch_assoc()) {
         <p>City: ' . $city . '</p>
         <p>Home number: ' . $homenumber . '</p>
         <p>Zipcode: ' . $zipcode . '</p>   
-        <p>Adress type: ' . $addressType . '</p>          
+        <p>Adress type: ' . $addressType . '</p>     
+        <form action="delete-data.php" method="post">
+            <input type="hidden" name="contact_id" value="' . $contact_id . '">
+            <button type="submit" name="delete_contact">DELETE</button>
+        </form>     
     </div>';
 }
 

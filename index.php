@@ -28,7 +28,7 @@
             <select class="click-me-dropdown" id="dropdown" onchange="redirectToPage()">
                 <option hidden selected>' . $username . '</option>
                 <option value="profile.php">PROFILE</option>
-                <option value="logout.php">LOGOUT</option>
+                <option value="scripts/logout.php">LOGOUT</option>
             </select>
             ';
         } else {
