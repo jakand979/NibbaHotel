@@ -20,7 +20,15 @@ if ($result) {
         $phone = $row['phone'];
         $description = $row['description'];
         $image_url = $row['image_url'];
-        echo ' ';
+        echo
+        '<div class="hotel">
+            <img src="'. $image_url .'" alt="hotel_image">
+            <h1>' . $name . ' </h1>
+            <p>Address: ' . $address . '</p>
+            <p>Phone: ' . $phone . '</p>
+            <span>' . $description . '</span>
+            <a href="book-now.php"><button>BOOK NOW!</button></a>
+        </div>';
     }
 }
 

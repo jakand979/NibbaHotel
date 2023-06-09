@@ -5,15 +5,16 @@ $dbusername = 'root';
 $dbpassword = '';
 $dbname = 'hotel_booking';
 
+$conn = mysqli_connect($host, $dbusername, $dbpassword, $dbname);
+if ($conn->connect_error) {
+    die('Failed to connect with database: ' . $conn->connect_error);
+}
+
 $successmsg = array();
+
 $error = array();
 
 if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])) {
-    $conn = mysqli_connect($host, $dbusername, $dbpassword, $dbname);
-    if ($conn->connect_error) {
-        die('Failed to connect with database: ' . $conn->connect_error);
-    }
-
     $userName = htmlspecialchars(trim($_POST['name']), ENT_QUOTES,'UTF-8');
     $userEmail = htmlspecialchars(trim($_POST['email']), ENT_QUOTES,'UTF-8');
     $msg = htmlspecialchars(trim($_POST['message']), ENT_QUOTES,'UTF-8');

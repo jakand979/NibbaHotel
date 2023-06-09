@@ -12,10 +12,10 @@ if ($conn->connect_error) {
 
 $errors = array();
 
-if (isset($_POST['login']) && isset($_POST['email']) && isset($_POST['roles']) && isset($_POST['password']) && isset($_POST['password2'])) {
+if (isset($_POST['login']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {
     $userLogin = htmlspecialchars(trim($_POST['login']), ENT_QUOTES,'UTF-8');
     $userEmail = htmlspecialchars(trim($_POST['email']), ENT_QUOTES,'UTF-8');
-    $default_role = 1;
+    $default_role = 2;
     $userPassword = htmlspecialchars(trim($_POST['password']), ENT_QUOTES,'UTF-8');
     $repeatedPassword = htmlspecialchars(trim($_POST['password2']), ENT_QUOTES,'UTF-8');
 
