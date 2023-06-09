@@ -17,7 +17,7 @@
     <nav class="home-nav-container">
         <a class="nav-home" href="index.php"><h1>NIBBA HOTEL</h1></a>
         <a class="nav-links" href="gallery.html">GALLERY</a>
-        <a class="nav-links" href="bookings.php">BOOK ONLINE</a>
+        <a class="nav-links" href="book-online.php">BOOK ONLINE</a>
         <a class="nav-links" href="favourites.php">FAVOURITES</a>
         <a class="nav-links" href="contact.php">CONTACT US</a>
         <?php

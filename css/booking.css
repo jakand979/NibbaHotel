@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4dfb6;
+    opacity: 0.9;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f4dfb6;;
+    opacity: 0.9;
+}
+
+.container img {
+    height: 12vh;
+    margin-top: 2vh;
+}

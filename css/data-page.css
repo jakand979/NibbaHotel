@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4dfb6;
+    opacity: 0.9;
 }
 
 .container {
@@ -18,7 +19,8 @@ body {
 }
 
 .container img {
-    height: 10vh;
+    height: 12.5vh;
+    margin-top: 2vh;
 }
 
 p {
