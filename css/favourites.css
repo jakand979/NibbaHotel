@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 62vh;
+    height: 66vh;
     width: 60vw;
     margin-top: 4vh;
     margin-bottom: 1vh;
@@ -68,6 +68,7 @@ body {
     height: 6vh;
     width: 10vw;
     margin-top: 1vh;
+    margin-bottom: 2vh;
     background-color: #FFFFFF;
     border-color: #0978bf;
     border-radius: 15px;

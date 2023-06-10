@@ -25,7 +25,7 @@ body {
 .hotel {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 94vh;
     width: 60vw;
     margin-top: 4vh;
     margin-bottom: 1vh;
