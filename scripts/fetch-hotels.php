@@ -10,8 +10,6 @@ if ($conn->connect_error) {
     die('Failed to connect with database: ' . $conn->connect_error);
 }
 
-$user_id = $_SESSION['user_id'];
-
 $query = "SELECT * FROM hotels";
 $result = $conn->query($query);
 
@@ -24,6 +22,7 @@ if ($result) {
         $description = $row['description'];
         $image_url = $row['image_url'];
         if (isset($_SESSION['user_id'])) {
+            $user_id = $_SESSION['user_id'];
             include('scripts/add-favourite.php');
             echo
             '<div class="hotel">
