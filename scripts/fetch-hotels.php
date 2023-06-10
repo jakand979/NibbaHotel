@@ -20,16 +20,30 @@ if ($result) {
         $phone = $row['phone'];
         $description = $row['description'];
         $image_url = $row['image_url'];
-        echo
-        '<div class="hotel">
-            <img src="'. $image_url .'" alt="hotel_image">
-            <h1>' . $name . ' </h1>
-            <p>Address: ' . $address . '</p>
-            <p>Phone: ' . $phone . '</p>
-            <span>' . $description . '</span>
-            <a href="book-now.php"><button>BOOK NOW!</button></a>
-        </div>';
+        if (isset($_SESSION['user_id'])) {
+            echo
+            '<div class="hotel">
+                <img src="'. $image_url .'" alt="hotel_image">
+                <h1>' . $name . '<a class="heart">&#x2764;</a></h1>
+                <p>Address: ' . $address . '</p>
+                <p>Phone: ' . $phone . '</p>
+                <span>' . $description . '</span>
+                <a href="book-now.php"><button>BOOK NOW!</button></a>
+            </div>';
+        } else {
+            echo
+            '<div class="hotel">
+                <img src="'. $image_url .'" alt="hotel_image">
+                <h1>' . $name . '</h1>
+                <p>Address: ' . $address . '</p>
+                <p>Phone: ' . $phone . '</p>
+                <span>' . $description . '</span>
+                <a href="sign-in.php"><button>SIGN IN</button></a>
+            </div>';
+        }
     }
 }
+
+$conn->close();
 
 ?>

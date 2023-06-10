@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4dfb6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f4dfb6;;
+    opacity: 0.9;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container a img {
+    height: 12vh;
+    margin-top: 2vh;
+}
+
+.container a button {
+    height: 6vh;
+    width: 7vw;
+    margin-top: 10vh;
+    margin-left: 26vw;
+    margin-right: 26vw;
+    background-color: #FFFFFF;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+}
+
+.container a button:active {
+    transform: translateY(5px);
+}
+
+.hotel {
+    display: flex;
+    flex-direction: column;
+    height: 58vh;
+    width: 60vw;
+    margin-top: 4vh;
+    margin-bottom: 1vh;
+    padding: 1vw;
+    background-color: #FFFFFF;
+    border-color: #0978bf;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.hotel img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.hotel a button {
+    height: 6vh;
+    width: 10vw;
+    margin-top: 2vh;
+    margin-left: 24.25vw;
+    background-color: #FFFFFF;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+}
+
+.hotel a button:active {
+    transform: translateY(5px);
+}
+.hotel h1 {
+    margin-left: 21vw;
+}
+
+.hotel a button {
+
+}
+
+

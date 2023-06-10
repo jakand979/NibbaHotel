@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <link rel="icon" type="image/ico" href="favicon/favicon.ico">
