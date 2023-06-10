@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 06 Cze 2023, 23:50
+-- Czas generowania: 11 Cze 2023, 00:57
 -- Wersja serwera: 10.4.20-MariaDB
 -- Wersja PHP: 8.0.8
 
@@ -42,7 +42,9 @@ CREATE TABLE `addresses` (
 --
 
 INSERT INTO `addresses` (`id`, `street`, `city`, `homenumber`, `zipcode`, `type`, `user_id`) VALUES
-(2, 'Dąbrówka 10', 'Kłodawa', '10', '62-650', 'mailing address', 2);
+(1, 'Waterview Lane', 'Albuquerque', '95', '87106', 'address of residence', 4),
+(2, 'Westfall Avenue', 'Santa Fe', '1129', '87501', 'mailing address', 4),
+(3, 'Adamieckiego', 'Dąbrowa Górnicza', '23', '44-300', 'address of residence', 7);
 
 -- --------------------------------------------------------
 
@@ -79,8 +81,9 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `type`, `phone`, `user_id`) VALUES
-(20, 'mobile phone', '123 456 782', 2),
-(21, 'landline phone', '123 456 789', 2);
+(1, 'mobile phone', '505-555-0117', 4),
+(2, 'mobile phone', '505-555-0171', 4),
+(3, 'mobile phone', '505-555-0119', 7);
 
 -- --------------------------------------------------------
 
@@ -93,6 +96,18 @@ CREATE TABLE `favourites` (
   `user_id` int(11) NOT NULL,
   `hotel_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `favourites`
+--
+
+INSERT INTO `favourites` (`id`, `user_id`, `hotel_id`) VALUES
+(3, 4, 4),
+(5, 7, 1),
+(7, 7, 4),
+(8, 7, 5),
+(10, 4, 5),
+(11, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -112,9 +127,8 @@ CREATE TABLE `forms` (
 --
 
 INSERT INTO `forms` (`id`, `name`, `email`, `message`) VALUES
-(1, 'Maliniak123', 'nygusowaty@gmail.com', 'Nibba Hotel has always emphasized the importance of friendly staff ready to fulfill every wish. However, recent encounters have left me questioning this claim. What measures are being taken to ensure that the staff maintains a warm and welcoming attitude towards guests? How does Nibba Hotel plan to address the disconnect that has been observed between the promises made and the actual experience provided?'),
-(2, 'BiggestFan123', 'my.mail@interia.pl', 'What are the prices for monthly subscription for your hotels? I need quick answer.'),
-(3, 'Menik234', 'elo320@gmail.com', 'What is your staff salary? I want to join your staff in current time, and i am very interested in this position. Salamalejkum braders.');
+(1, 'Rajesh', 'rajesh@wp.pl', 'How many dollars I have to pay for one night at your exclusive hotels? Thank you for future answer.'),
+(2, 'Jacob', 'jacob@mailmaster.com', 'Is there any other way of paying instead of BLIK? I dont have BLIK serivce in my bank account!');
 
 -- --------------------------------------------------------
 
@@ -130,6 +144,17 @@ CREATE TABLE `hotels` (
   `description` text NOT NULL,
   `image_url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `hotels`
+--
+
+INSERT INTO `hotels` (`id`, `name`, `address`, `phone`, `description`, `image_url`) VALUES
+(1, 'Nibba Hotel South Carolina', '2800 Rosewood Dr, Charleston, SC 29205, United States', '(803) 251-8990', 'Nibba Hotel South Carolina is strategically located at 2800 Rosewood Dr, Charleston, SC 29205, United States, offering easy access to the vibrant city and its attractions. From historical landmarks to cultural hotspots, there is something for everyone to explore and discover. Come and experience the unparalleled luxury and impeccable service that define Nibba Hotel South Carolina. We guarantee that your stay with us will leave you with cherished memories that will last a lifetime. Book your stay today and let us create an unforgettable experience just for you!', 'images/img1.png'),
+(2, 'Nibba Hotel Thailand', '86 Chakrapong Rd., Talat Yot, Phra Nakhon, กรุงเทพมหานคร, กรุงเทพมหานคร 10200, Thailand', '02 282 9948', 'Welcome to Nibba Hotel Thailand, a captivating oasis situated in the heart of Bangkok. As part of the esteemed Nibba Hotel chain, we are dedicated to providing our guests with an unforgettable experience that beautifully combines luxurious comforts with the rich tapestry of Thai culture. Nestled at 86 Chakrapong Rd., Talat Yot, Phra Nakhon, กรุงเทพมหานคร, กรุงเทพมหานคร 10200, Thailand, our hotel invites you to immerse yourself in the vibrant energy and warmth of this enchanting city!', 'images/img2.png'),
+(3, 'Nibba Hotel Philippines', 'Tin-ao, Cagayan de Oro City, Misamis Oriental, Cagayan de Oro, Northern Mindanao 9000, Philippines', '(088) 855 3609', 'The location of Nibba Hotel Philippines provides convenient access to the country\'s cultural and historical treasures. Immerse yourself in the bustling streets of Manila, where modern skyscrapers coexist with Spanish colonial architecture. Explore historic sites such as Intramuros, the ancient walled city, or visit the iconic Rizal Park, a sprawling green oasis in the heart of the city. Discover the vibrant local markets, where you can find unique crafts, vibrant textiles, and authentic Filipino souvenirs. Escape to the enchanting world of Nibba Hotel Philippines, where luxury meets the natural wonders and rich cultural heritage of the Philippines!', 'images/img3.png'),
+(4, 'Nibba Hotel Peru', 'Salaverry 2443, San Isidro, LIMA27 Lima, Peru', '(01) 3159600', 'Welcome to Nibba Hotel Peru, an extraordinary retreat nestled in the vibrant city of Lima. As a distinguished member of the esteemed Nibba Hotel chain, we offer a seamless blend of modern luxury, Peruvian charm, and exceptional service. Located at Salaverry 2443, San Isidro, LIMA27 Lima, Peru, our hotel provides the perfect base for exploring the rich cultural heritage and culinary delights that this captivating country has to offer. Escape to the captivating world of Nibba Hotel Peru, where modern comforts intertwine with the enchanting culture of Peru!', 'images/img4.png'),
+(5, 'Nibba Hotel California', '3251 20th Ave, San Francisco, CA 94132, United States', '(323) 547-5497', 'Welcome to Nibba Hotel California, a remarkable destination that perfectly captures the essence of the Golden State. As a proud member of the prestigious Nibba Hotel chain, we are committed to providing our guests with an unforgettable experience that combines California\'s vibrant energy, stunning natural beauty, and unparalleled hospitality. Located at 3251 20th Ave, San Francisco, CA 94132, United States, our hotel offers a gateway to explore the iconic city of San Francisco and its surrounding wonders. Book your stay with us today and let us guide you on a remarkable journey through the beauty and allure of California\'s iconic landscapes and renowned hospitality!', 'images/img5.png');
 
 -- --------------------------------------------------------
 
@@ -179,9 +204,7 @@ CREATE TABLE `statuses` (
 --
 
 INSERT INTO `statuses` (`status_id`, `name`) VALUES
-(1, 'booked'),
-(2, 'processed'),
-(3, 'canceled');
+(1, 'processed');
 
 -- --------------------------------------------------------
 
@@ -203,9 +226,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `password`, `created_at`, `role_id`, `email`, `username`) VALUES
-(1, 'a386b3f0b2735fcb169ccf66ebee025d0cc487ce89962a56c7388be9e481e3b4', '2023-05-24 18:33:10', 1, 'jakand979@gmail.com', 'jakand979'),
-(2, 'e606e38b0d8c19b24cf0ee3808183162ea7cd63ff7912dbb22b5e803286b4446', '2023-05-27 04:58:32', 2, 'jak.and@interia.pl', 'user123'),
-(3, '9263cb0b1c7ec9e84973f6659a8e568fa42a702d0c2d505b054198ec7a0ac19d', '2023-05-30 17:55:32', 2, 'nygusowaty@gmail.com', 'nygus123');
+(1, '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', '2023-06-09 17:49:16', 1, 'admin123@interia.pl', 'admin123'),
+(2, '9924801e8aca687d0a71f4ab14a8ed1644d48348dce8941b6cfdf7fb3076bae2', '2023-06-09 17:51:56', 1, 'admin234@wp.pl', 'admin234'),
+(3, '255876d41c8df2de3170f47fd59d89a8d71e3ca678b8b3dac1981b61181def8c', '2023-06-09 17:57:45', 1, 'admin345@gmail.com', 'admin345'),
+(4, 'e606e38b0d8c19b24cf0ee3808183162ea7cd63ff7912dbb22b5e803286b4446', '2023-05-27 04:58:32', 2, 'user123@interia.pl', 'user123'),
+(5, '07fb47212f7d30f8c9e1d9843228b65a301cee6ea7624ea9372539ea21603246', '2023-06-09 17:58:44', 2, 'user234@wp.pl', 'user234'),
+(6, 'e3c702b7186cec0d9d6cc0d703adeed3873577cc673aec304c72b25af935a170', '2023-06-09 18:00:29', 2, 'user345@gmail.com', 'user345'),
+(7, 'c670f7b23c1bf997ec890e9d23ea7c016e12b243bdbd151f08baf5f0b86a7c5e', '2023-06-10 22:38:18', 2, 'user456@mailing.com', 'user456');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -291,7 +318,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT dla tabeli `addresses`
 --
 ALTER TABLE `addresses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `bookings`
@@ -303,31 +330,31 @@ ALTER TABLE `bookings`
 -- AUTO_INCREMENT dla tabeli `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `favourites`
 --
 ALTER TABLE `favourites`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT dla tabeli `forms`
 --
 ALTER TABLE `forms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `hotels`
 --
 ALTER TABLE `hotels`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT dla tabeli `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Ograniczenia dla zrzutów tabel
