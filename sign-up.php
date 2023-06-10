@@ -33,7 +33,7 @@
                 <?php if (isset($errors['password2'])) {
                     echo 'class="error"';
                 } ?>>
-            <?php if (isset($errors['database'])) echo '<span class="error-message">' . $errors['database'] . '</span>'; ?>
+            <?php if (isset($errors['nonregistered'])) echo '<span class="error-message">' . $errors['database'] . '</span>'; ?>
             <?php if (isset($errors['login'])) echo '<span class="error-message">' . $errors['login'] . '</span>'; ?>
             <?php if (isset($errors['email'])) echo '<span class="error-message">' . $errors['email'] . '</span>'; ?>
             <?php if (isset($errors['password'])) echo '<span class="error-message">' . $errors['password'] . '</span>'; ?>

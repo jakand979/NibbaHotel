@@ -25,14 +25,15 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
     $stmt->bind_param("sss", $userName, $userEmail, $msg);
     $result = $stmt->execute();
 
+    $stmt->close();
+
     if ($result) {
         $successmsg['success'] = 'Contact form sent successfully!';
     } else {
         $error['notsent'] = 'We had problems with receiving your message. Try later!';
     }
-
-    $conn->close();
-
 }
+
+$conn->close();
 
 ?>

@@ -14,6 +14,7 @@
     <div class="container">
         <a href="index.php"><img src="images/hotel-sign.png" alt="hotel_sign"></a>
         <?php
+
             include('scripts/fetch-hotels.php');
         ?>
     </div>

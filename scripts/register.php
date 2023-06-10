@@ -56,14 +56,14 @@ if (isset($_POST['login']) && isset($_POST['email']) && isset($_POST['password']
                 sleep(1);
                 echo '<script>window.location.href = "http://localhost/NibbaHotel/sign-in.php";</script>';
             } else {
-                $errors['database'] = 'Failed to register user. Please try again later.';
+                $errors['nonregistered'] = 'Failed to register user. Please try again later.';
             }
         }
     } else {
         $errors['password2'] = 'Passwords are not equal.';
     }
-
-    $conn->close();
 }
+
+$conn->close();
 
 ?>

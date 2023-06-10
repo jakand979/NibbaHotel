@@ -29,13 +29,13 @@ if (isset($_SESSION['user_id'])) {
             '<div class="hotel">
                 <img src="'. $image_url .'" alt="hotel_image">
                 <h1>' . $name . '</h1>
+                
                 <a href="book-online.php"><button>CHECK MORE INFO!</button></a>
             </div>';
         }
     }
-} else {
-    echo '<a href="sign-in.php"><button>SIGN IN</button></a>';
 }
 
 $conn->close();
+
 ?>

@@ -64,8 +64,8 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
             $stmt->execute();
             $result = $stmt->get_result();
 
-            $role_row = $result->fetch_assoc();
-            $_SESSION['user_id'] = $role_row['id'];
+            $row = $result->fetch_assoc();
+            $_SESSION['user_id'] = $row['id'];
 
             $stmt->close();
 
@@ -86,8 +86,8 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
     } else {
         $errors['username'] = "This username does not exist.";
     }
-
-    $conn->close();
 }
+
+$conn->close();
 
 ?>

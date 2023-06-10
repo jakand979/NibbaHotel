@@ -1,6 +1,5 @@
 <?php
 
-
 $host = 'localhost';
 $dbusername = 'root';
 $dbpassword = '';
@@ -12,6 +11,7 @@ if ($conn->connect_error) {
 }
 
 $successmsg = array();
+
 $error = array();
 
 if (isset($_POST['contact-type']) && isset($_POST['phone'])) {
@@ -67,7 +67,8 @@ if (isset($_POST['contact-type']) && isset($_POST['phone'])) {
             }
         }
     }
-    $conn->close();
 }
+
+$conn->close();
 
 ?>

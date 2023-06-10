@@ -29,8 +29,6 @@ if (isset($_POST['contact_id'])) {
     } else {
         $error['nondeleted'] = 'Failed to delete contact. Please try again later.';
     }
-
-    $conn->close();
 }
 
 if (isset($_POST['address_id'])) {
@@ -47,9 +45,11 @@ if (isset($_POST['address_id'])) {
         $conn->close();
         sleep(1);
         header("Location: http://localhost/NibbaHotel/user-data.php");
+    } else {
+        $error['nondeleted'] = 'Failed to delete address. Please try again later.';
     }
-
-    $conn->close();
 }
+
+$conn->close();
 
 ?>

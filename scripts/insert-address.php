@@ -11,6 +11,7 @@ if ($conn->connect_error) {
 }
 
 $successmsg = array();
+
 $error = array();
 
 if (isset($_POST['street']) && isset($_POST['city']) && isset($_POST['homenumber']) && isset($_POST['zipcode']) && isset($_POST['address-type'])) {
@@ -72,7 +73,8 @@ if (isset($_POST['street']) && isset($_POST['city']) && isset($_POST['homenumber
             }
         }
     }
-    $conn->close();
 }
+
+$conn->close();
 
 ?>
