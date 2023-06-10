@@ -28,8 +28,8 @@ if ($result) {
             echo
             '<div class="hotel">
                 <form id="favourites-' . $hotel_id . '" action="" method="post">
-                    <input type="hidden" name="hotel_id" value="' . $hotel_id . '">
                     <input type="hidden" name="user_id" value="' . $user_id . '">
+                    <input type="hidden" name="hotel_id" value="' . $hotel_id . '">
                 </form>
                 <img src="' . $image_url . '" alt="hotel_image">
                 <h1>' . $name . '</h1>

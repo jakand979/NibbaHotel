@@ -25,7 +25,9 @@ body {
 .hotel {
     display: flex;
     flex-direction: column;
-    height: 58vh;
+    justify-content: center;
+    align-items: center;
+    height: 62vh;
     width: 60vw;
     margin-top: 4vh;
     margin-bottom: 1vh;
@@ -36,20 +38,36 @@ body {
     border-style: solid;
 }
 
+.hotel form {
+    display: none;
+}
+
 .hotel img {
     width: 100%;
     border-radius: 20px;
 }
 
-.hotel h1 {
-    margin-left: 21vw;
+.fav {
+    margin-bottom: 2vh;
+    background-color: #FFFFFF;
+    border: none;
+    color: red;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.fav:hover {
+    cursor: pointer;
+}
+
+.fav:active {
+    transform: translateY(5px);
 }
 
 .hotel a button {
     height: 6vh;
     width: 10vw;
-    margin-top: 2vh;
-    margin-left: 24.25vw;
+    margin-top: 1vh;
     background-color: #FFFFFF;
     border-color: #0978bf;
     border-radius: 15px;
