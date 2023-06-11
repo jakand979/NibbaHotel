@@ -30,13 +30,16 @@ if ($result) {
                     <input type="hidden" name="user_id" value="' . $user_id . '">
                     <input type="hidden" name="hotel_id" value="' . $hotel_id . '">
                 </form>
+                <form id="hotel_name-'. $hotel_id .'" action="book-now.php" method="post">
+                    <input type="hidden" name="name" value="' . $name . '">
+                </form>
                 <img src="' . $image_url . '" alt="hotel_image">
                 <h1>' . $name . '</h1>
                 <button type="submit" form="favourites-' . $hotel_id . '" class="fav">&#x2764;</button>
                 <p>Address: ' . $address . '</p>
                 <p>Phone: ' . $phone . '</p>
                 <span>' . $description . '</span>
-                <a href="book-now.php"><button>BOOK NOW!</button></a>
+                <button type="submit" form="hotel_name-'. $hotel_id .'" class="book">BOOK NOW!</button>
             </div>';
         } else {
             echo

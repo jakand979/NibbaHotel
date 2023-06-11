@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4dfb6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f4dfb6;
+    opacity: 0.9;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container a img {
+    height: 12vh;
+    margin-top: 2vh;
+}
+
+.container a {
+    margin-bottom: 6vh;
+}
+
+.container h1 {
+    margin-bottom: 8vh;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+}
+
+.container form label {
+    margin-bottom: 2.5vh;
+    font-size: 28px;
+}
+
+.container form input[type="date"] {
+    height: 6vh;
+    width: 15.5vh;
+    margin-bottom: 5vh;
+    padding: 0.5vw;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+    font-size: 20px;
+}
+
+.container form button {
+    height: 6vh;
+    width: 15.5vh;
+    margin-top: 3vh;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+}
+
+.container form button:active {
+    transform: translateY(5px);
+}

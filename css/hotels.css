@@ -72,10 +72,11 @@ body {
     margin-bottom: 0.5vh;
 }
 
-.hotel a button {
+.book {
     height: 6vh;
     width: 7vw;
-    margin-left: 26vw;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #FFFFFF;
     border-color: #0978bf;
     border-radius: 15px;
@@ -83,7 +84,7 @@ body {
     outline: none;
 }
 
-.hotel a button:active {
+.book:active {
     transform: translateY(5px);
 }
 

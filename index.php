@@ -7,10 +7,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nibba Hotel - Your Place to Stay</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="libraries/slick.min.js"></script>
-    <script src="scripts/slider.js"></script>
-    <script src="scripts/dropdown-handler.js"></script>
 </head>
 <body>
     <nav class="home-nav-container">
@@ -71,7 +67,7 @@
         <img src="images/deck-chair.png" class="item" alt="sunny_deckchair_beach">
         <img src="images/receptionist.png" class="item" alt="reception_sign"
         <img src="" class="" alt="">
-        <img src="images/bellboi.png" class="item" alt="bell_boy">
+        <img src="images/bell-boy.png" class="item" alt="bell_boy">
         <img src="images/maid.png" class="item" alt="maid">
         <img src="images/television.png" class="item" alt="TV">
         <img src="images/minibar.png" class="item" alt="minibar">
@@ -85,5 +81,9 @@
         <img src="images/email.png" class="footer-item" alt="phone_call">
         <p class="footer-item">nibba.contact@travel.com</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="libraries/slick.min.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/dropdown-handler.js"></script>
 </body>
 </html>
