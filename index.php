@@ -3,7 +3,7 @@
 <head>
     <link rel="icon" type="image/ico" href="favicon/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/home.css">
-    <link rel="stylesheet" type="text/css" href="libraries/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nibba Hotel - Your Place to Stay</title>
@@ -82,7 +82,7 @@
         <p class="footer-item">nibba.contact@travel.com</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="libraries/slick.min.js"></script>
+    <script src="slick/slick.min.js"></script>
     <script src="scripts/slider.js"></script>
     <script src="scripts/dropdown-handler.js"></script>
 </body>
