@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel="icon" type="image/ico" href="favicon/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/bookings.css">
+    <link rel="stylesheet" type="text/css" href="css/booking.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nibba Hotel</title>
