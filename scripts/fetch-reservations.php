@@ -14,7 +14,7 @@ $uid = $_SESSION['user_id'];
 
 include('scripts/calculate-days-price.php');
 
-$query = "SELECT check_in, check_out, image_url, name FROM bookings 
+$query = "SELECT check_in, check_out, image_url, name, created_at FROM bookings 
 INNER JOIN hotels ON hotels.id = bookings.hotel_id WHERE user_id = ? ";
 $stmt = $conn->prepare($query);
 $stmt->bind_param("i", $uid);
@@ -38,6 +38,8 @@ while ($row = $result->fetch_assoc()) {
     $check_in = $row['check_in'];
     $check_out = $row['check_out'];
 
+    $created_at = $row['created_at'];
+
     $days = calculateDays($check_in, $check_out);
     $pricePerNight = 350;
     $price = calculatePrice($check_in, $check_out, $pricePerNight);
@@ -48,7 +50,7 @@ while ($row = $result->fetch_assoc()) {
         <h2>'. $name . '</h2>
         <p>Check-in: '. $check_in .'</p>
         <p>Check-out: '. $check_out .'</p>
-        <p>Days: '. $days .'</p>
+        <p>Booked at: '. $created_at .'</p>
         <p>Price: '. $price .'$</p>   
         <p>Payment status: '. $status_name .'</p> 
     </div>';

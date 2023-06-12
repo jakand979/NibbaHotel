@@ -9,10 +9,85 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: #f4dfb6;
     opacity: 0.9;
     font-family: 'Open Sans', sans-serif;
 }
+
+.container h1 {
+    margin-top: 2vh;
+}
+
+.click-me-dropdown {
+    height: 4vh;
+    width: 6vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    border-color: #0978bf;
+    border-style: solid;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+}
+
+.click-me-dropdown option {
+    color: #2c272b;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.container a button {
+    height: 4vh;
+    width: 6vw;
+    margin-bottom: 2vh;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+    cursor: pointer;
+}
+
+.container a button:active {
+    transform: translateY(5px);
+}
+
+
+.admin-table {
+    width: 90%;
+    margin-bottom: 5vh;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    padding: 8px;
+    background-color: #FFFFFF;
+    border: 1px solid #0978bf;
+    text-align: left;
+}
+
+.admin-table td {
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #2c272b;
+}
+
+.admin-table td form button {
+    height: 4vh;
+    width: 4vw;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+    cursor: pointer;
+}
+
+.admin-table td form button:active {
+    transform: translateY(5px);
+}
+

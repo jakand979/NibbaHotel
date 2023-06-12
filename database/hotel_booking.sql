@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 11 Cze 2023, 01:13
+-- Czas generowania: 13 Cze 2023, 00:29
 -- Wersja serwera: 10.4.20-MariaDB
 -- Wersja PHP: 8.0.8
 
@@ -102,12 +102,11 @@ CREATE TABLE `favourites` (
 --
 
 INSERT INTO `favourites` (`id`, `user_id`, `hotel_id`) VALUES
-(3, 4, 4),
 (5, 7, 1),
 (7, 7, 4),
-(8, 7, 5),
-(10, 4, 5),
-(11, 4, 1);
+(12, 4, 2),
+(14, 4, 3),
+(15, 7, 2);
 
 -- --------------------------------------------------------
 
@@ -128,7 +127,8 @@ CREATE TABLE `forms` (
 
 INSERT INTO `forms` (`id`, `name`, `email`, `message`) VALUES
 (1, 'Rajesh', 'rajesh@wp.pl', 'How many dollars I have to pay for one night at your exclusive hotels? Thank you for future answer.'),
-(2, 'Jacob', 'jacob@mailmaster.com', 'Is there any other way of paying instead of BLIK? I dont have BLIK serivce in my bank account!');
+(2, 'Jacob', 'jacob@mailmaster.com', 'Is there any other way of paying instead of BLIK today? I dont have BLIK serivce in my bank account!'),
+(3, 'DissatisfiedMan', 'dis@twitch.tv', 'I am very dissatisfied with your service in Nibba Hotel Thailand. Where can I send letter of complaint? Thank you for future answer.');
 
 -- --------------------------------------------------------
 
@@ -165,7 +165,7 @@ INSERT INTO `hotels` (`id`, `name`, `address`, `phone`, `description`, `image_ur
 CREATE TABLE `payments` (
   `payment_id` int(11) NOT NULL,
   `method` varchar(20) NOT NULL,
-  `amount` double NOT NULL,
+  `amount` int(12) NOT NULL,
   `status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -196,14 +196,14 @@ INSERT INTO `roles` (`role_id`, `name`) VALUES
 
 CREATE TABLE `statuses` (
   `status_id` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL
+  `sname` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `statuses`
 --
 
-INSERT INTO `statuses` (`status_id`, `name`) VALUES
+INSERT INTO `statuses` (`status_id`, `sname`) VALUES
 (1, 'processed');
 
 -- --------------------------------------------------------
@@ -336,13 +336,13 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT dla tabeli `favourites`
 --
 ALTER TABLE `favourites`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT dla tabeli `forms`
 --
 ALTER TABLE `forms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `hotels`

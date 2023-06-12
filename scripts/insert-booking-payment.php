@@ -60,7 +60,7 @@ if (isset($_POST['payment_method']) && isset($_POST['amount']) && isset($_POST['
     $stmt->close();
 
     if ($result1 && $result2) {
-        header('Location: http://localhost/NibbaHotel/thank-you.php');
+        header('Location: http://localhost/NibbaHotel/temp.php');
     }
 }
 
