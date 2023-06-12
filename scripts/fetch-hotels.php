@@ -31,7 +31,10 @@ if ($result) {
                     <input type="hidden" name="hotel_id" value="' . $hotel_id . '">
                 </form>
                 <form id="hotel_name-'. $hotel_id .'" action="book-now.php" method="post">
+                    <input type="hidden" name="uid" value="' . $user_id . '">
+                    <input type="hidden" name="hid" value="' . $hotel_id . '">
                     <input type="hidden" name="name" value="' . $name . '">
+                    <input type="hidden" name="img_url" value="'. $image_url .'">
                 </form>
                 <img src="' . $image_url . '" alt="hotel_image">
                 <h1>' . $name . '</h1>
@@ -43,13 +46,13 @@ if ($result) {
             </div>';
         } else {
             echo
-            '<div class="hotel">
+            '<div class="view">
                 <img src="'. $image_url .'" alt="hotel_image">
                 <h1>' . $name . '</h1>
                 <p>Address: ' . $address . '</p>
                 <p>Phone: ' . $phone . '</p>
                 <span>' . $description . '</span>
-                <a href="sign-in.php"><button>SIGN IN</button></a>
+                <a href="sign-in.php"><button type="button" class="book">SIGN IN</button></a>
             </div>';
         }
     }

@@ -10,9 +10,8 @@ if ($conn->connect_error) {
     die('Failed to connect with database: ' . $conn->connect_error);
 }
 
-$uid = $_SESSION['user_id'];
-
 if (isset($_POST['hotel_id'])) {
+    $uid = $_POST['user_id'];
     $hid = $_POST['hotel_id'];
 
     $check_query = "SELECT * FROM favourites WHERE user_id = ? AND hotel_id = ?";

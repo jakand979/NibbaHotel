@@ -27,7 +27,7 @@
             </select>
             ';
         } else {
-            echo '<a href="sign-in.php"><button class="click-me">SIGN IN</button></a>';
+            echo '<a href="sign-in.php"><button type="button" class="click-me">SIGN IN</button></a>';
         }
         ?>
     </nav>
@@ -77,7 +77,7 @@
         <img src="images/pin.png" class="footer-item" alt="location_pin">
         <p class="footer-item">2801 Hill St, New Smyrna Beach, FL 32169, United States</p>
         <img src="images/phone-call.png" class="footer-item" alt="phone_call">
-        <p class="footer-item">(555) 555-1234</p>
+        <p class="footer-item">555-555-1234</p>
         <img src="images/email.png" class="footer-item" alt="phone_call">
         <p class="footer-item">nibba.contact@travel.com</p>
     </footer>

@@ -22,6 +22,7 @@
                 <p>Login: ' . $username .'</p>
                 <p>Email: ' . $email .'</p>
                 <p><a href="user-data.php">YOUR CONTACTS / ADDRESSES</a></p>
+                <p><a href="reservations.php">YOUR RESERVATIONS</a></p>
                 ';
             }
             ?>

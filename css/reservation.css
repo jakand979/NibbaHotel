@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: #f4dfb6;;
+    background-color: #f4dfb6;
     opacity: 0.9;
     font-family: 'Open Sans', sans-serif;
 }
@@ -22,10 +22,12 @@ body {
     margin-top: 2vh;
 }
 
-.hotel {
+.details {
     display: flex;
     flex-direction: column;
-    height: 94vh;
+    justify-content: flex-start;
+    align-items: center;
+    height: 102vh;
     width: 60vw;
     margin-top: 4vh;
     margin-bottom: 1vh;
@@ -36,41 +38,53 @@ body {
     border-style: solid;
 }
 
-.hotel form {
-    display: none;
+
+.details h1 {
+    margin-bottom: 3vh;
 }
 
-.hotel img {
+.details img {
     width: 100%;
+    margin-bottom: 2.5vh;
     border-radius: 20px;
 }
 
-.fav {
-    margin-right: auto;
-    margin-bottom: 2vh;
-    background-color: #FFFFFF;
-    border: none;
-    color: red;
-    font-size: 40px;
-    text-decoration: none;
+.details p {
+    font-size: 20px;
 }
 
-.fav:active {
-    transform: translateY(5px);
+.details form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
 }
 
-.fav:hover {
-    cursor: pointer;
+.details form select {
+    width: 55%;
+    margin-top: 1vh;
+    margin-bottom: 10px;
+    padding: 12.5px;
+    border-color: #0978bf;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+    color: #2c272b;
+    font-style: italic;
+    font-weight: bold;
 }
 
-.hotel span {
-    margin-top: 2vh;
-    margin-bottom: 4vh;
+.details form select option {
+    color: #2c272b;
+    font-style: italic;
+    font-weight: bold;
 }
 
-.book {
+.details button {
     height: 6vh;
     width: 7vw;
+    margin-top: 2vh;
     margin-left: auto;
     margin-right: auto;
     background-color: #FFFFFF;
@@ -80,18 +94,16 @@ body {
     outline: none;
 }
 
-.book:active {
+.details button:active {
     transform: translateY(5px);
 }
 
-.book:hover {
-    cursor: pointer;
-}
-
-.view {
+.reservation {
     display: flex;
     flex-direction: column;
-    height: 82vh;
+    justify-content: flex-start;
+    align-items: center;
+    height: 84vh;
     width: 60vw;
     margin-top: 4vh;
     margin-bottom: 1vh;
@@ -102,35 +114,13 @@ body {
     border-style: solid;
 }
 
-.view img {
+.reservation img {
     width: 100%;
+    margin-bottom: 2.5vh;
     border-radius: 20px;
 }
 
-.view span {
-    margin-top: 2vh;
-    margin-bottom: 4vh;
+.reservation p {
+    font-size: 20px;
 }
-
-.view a {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.view a button {
-    height: 6vh;
-    width: 7vw;
-    background-color: #FFFFFF;
-    border-color: #0978bf;
-    border-radius: 15px;
-    border-style: solid;
-    outline: none;
-}
-
-.view a button:active {
-    transform: translateY(5px);
-}
-
-
-
 

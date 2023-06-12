@@ -57,7 +57,6 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
 
             $stmt->close();
 
-
             $user_id_query = "SELECT id FROM users WHERE username = ?";
             $stmt = $conn->prepare($user_id_query);
             $stmt->bind_param("s", $userLogin);

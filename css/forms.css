@@ -71,6 +71,10 @@ button:active {
     transform: translateY(5px);
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .error {
     background-color: #e34234;
     border-color: #e34234;
