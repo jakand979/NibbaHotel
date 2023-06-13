@@ -91,7 +91,7 @@ body {
 .view {
     display: flex;
     flex-direction: column;
-    height: 82vh;
+    height: 84vh;
     width: 60vw;
     margin-top: 4vh;
     margin-bottom: 1vh;

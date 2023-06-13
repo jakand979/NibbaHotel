@@ -103,10 +103,10 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 84vh;
+    height: 88vh;
     width: 60vw;
     margin-top: 4vh;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
     padding: 1vw;
     background-color: #FFFFFF;
     border-color: #0978bf;
