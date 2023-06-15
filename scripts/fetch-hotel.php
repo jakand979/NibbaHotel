@@ -29,7 +29,7 @@ $description = $row['description'];
 $image_url = $row['image_url'];
 
 echo
-'<form id="updateForm" action="update-hotel.php" method="post">
+'<form id="updateForm" action="scripts/update-hotel.php" method="post">
     <input type="hidden" name="hid" value="' . $hid .'">
     <input type="text" name="name" value="'. $name .'" maxlength="255" required>
     <input type="text" name="address" value="'. $address .'" maxlength="255" required>
