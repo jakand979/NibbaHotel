@@ -22,9 +22,9 @@ if (isset($_POST['login']) && isset($_POST['email']) && isset($_POST['password']
     $hashedUserPassword = hash('sha256', $userPassword);
 
     if ($userPassword == $repeatedPassword) {
-        $check_query = "SELECT * FROM users WHERE username = ? OR email = ? OR password = ?";
+        $check_query = "SELECT * FROM users WHERE username = ? OR email = ?";
         $stmt = $conn->prepare($check_query);
-        $stmt->bind_param("sss", $userLogin, $userEmail, $hashedUserPassword);
+        $stmt->bind_param("ss", $userLogin, $userEmail);
         $stmt->execute();
         $check_result = $stmt->get_result();
 
@@ -37,9 +37,6 @@ if (isset($_POST['login']) && isset($_POST['email']) && isset($_POST['password']
                 }
                 if ($row['email'] == $userEmail) {
                     $errors['email'] = 'Email already exists.';
-                }
-                if ($row['password'] == $hashedUserPassword) {
-                    $errors['password'] = 'Password already exists.';
                 }
             }
         } else {
