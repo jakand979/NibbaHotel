@@ -16,7 +16,7 @@ Project directories:
   - gallery.css - stylesheet for gallery page
   - home.css - stylesheet for home page
   - hotels.css - stylesheet for book online page
-  - panel.css - (TODO)
+  - panel.css - stylesheet for admin panel
   - profile.css - stylesheet for user profile page
   - reservation.css - stylesheet for reservation page and reservations in user profile
 - database - contains NibbaHotel project database in MySQL (available for import into phpMyAdmin - XAMPP component)
