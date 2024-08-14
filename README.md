@@ -1,5 +1,4 @@
 # NibbaHotel
-College project of hotel website.
 
 Project is using XAMPP (Apache, MariaDB, MySQL, PHP 8.2).
 
